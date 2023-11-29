@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+ .shad{
+  box-shadow: 0px 1px 5px 5px rgba(255, 255, 255, 0.25);
+
+ }
+
+ .fix-input{
+  border-radius: 8px;
+border: 1px solid #0B0E42;
+background: #FFF;
+box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.10), 2px 4px 6px 0px rgba(0, 0, 0, 0.05) inset;
+ }
+
+ .fix-btn{
+  border-radius: 26px;
+
+box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.15);
+ }
+
+ .fix-text{
+
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+ }
+
+ .succToast{
+  border-radius: 22px;
+opacity: 0.75;
+background: #7ED06A;
+box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.10);
+ }
+
+ .failToast{
+  border-radius: 22px;
+opacity: 0.75;
+background: #DF4343;
+box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.10);
+ }
