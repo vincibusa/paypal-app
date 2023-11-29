@@ -56,7 +56,7 @@ const PayPalComponent = () => {
   <p className='py-2'>Pagamento riuscito</p>
 </div>
 <div className={`w-1/2 h-fit failToast absolute top-3 flex justify-center items-center ${failToast ? 'block' : 'hidden'}`}>
-  <p className='py-2'>Pagamento non riuscito</p>
+  <p className='py-2'>Pagamento non riuscito, riprovare</p>
 </div>
       <div className='w-2/3 h-5/6 bg-white rounded-[30px] flex justify-center flex-col px-5 md:px-10 py-5 md:py-5 items-center shad'>
         <h1 className='fix-text'>Effettua pagamento con PayPal</h1>
