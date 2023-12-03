@@ -596,7 +596,7 @@ const [selezione, setSelezione]= useState('')
         </div>
         <div className='w-full h-full mt-5 md:mt-10  ' >
         <div className='flex flex-col items-center justify-center w-full '>
-          <div className='w-1/2'>
+          <div className='w-1/3'>
         <input
           type="text"
           value={amount}
