@@ -18,12 +18,6 @@ const [selezione, setSelezione]= useState('')
     setAmount(selectedValue);
     handlePayment(selectedValue);
 
-    if (selectedValue === '30.00') {
-      setPrimoImporto(true);
-    }
-    if (selectedValue === '100.00') {
-      setSecondoImporto(true);
-    }
   };
 
   useEffect(() => {
@@ -345,6 +339,31 @@ const [selezione, setSelezione]= useState('')
     }).render('#paypal-button-container-dodicesimo');
   }
  
+  if(selezione==='tredicesimo'){
+
+    
+    window.paypal.Buttons({
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: paymentAmount,
+              currency_code: 'EUR' // Imposta la valuta su euro
+            }
+          }]
+        });
+      },
+      onApprove: function (data, actions) {
+        setSuccToast(true);
+        console.log('Payment approved:', data);
+      },
+      onCancel: function (data) {
+        setFailToast(true);
+        console.log('Payment cancelled:', data);
+      }
+    }).render('#paypal-button-container-tredicesimo');
+  }
+
   };
 
   useEffect(() => {
@@ -353,7 +372,7 @@ const [selezione, setSelezione]= useState('')
   
 
   return (
-    <><div className>
+    <><div className='w-full h-full py-5'>
      <div className='flex justify-center '>
   <div className='w-1/2'>
     <img src={immagineA} alt="Descrizione dell'immagine A" />
@@ -385,7 +404,7 @@ const [selezione, setSelezione]= useState('')
                 <button onClick={() => handlePaymentAndAmount('30.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Prosegui</button>
               </div>
 
-              <div className={`mt-[10px] ${primoImporto ? 'block' : 'hidden'}`}>
+              <div className={`mt-[10px] ${selezione==='primo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-primo"></div>
               </div>
             </div>
@@ -401,7 +420,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='secondo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('100.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className={`mt-[10px] ${secondoImporto ? 'block' : 'hidden'}`}>
+              <div className={`mt-[10px] ${selezione==='secondo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-secondo"></div>
               </div>
             </div>
@@ -417,7 +436,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 h-full ${selezione==='terzo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('200.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='terzo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-terzo"></div>
               </div>
             </div>
@@ -435,7 +454,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='quarto' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('200.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='quarto' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-quarto"></div>
               </div>
             </div>
@@ -451,7 +470,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='quinto' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('220.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='quinto' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-quinto"></div>
               </div>
             </div>
@@ -467,7 +486,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full  ${selezione==='sesto' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('250.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='sesto' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-sesto"></div>
               </div>
             </div>
@@ -485,7 +504,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='settimo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('300.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='settimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-settimo"></div>
               </div>
             </div>
@@ -501,7 +520,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='ottavo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('330.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='ottavo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-ottavo"></div>
               </div>
             </div>
@@ -517,7 +536,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='nono' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('4000.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='nono' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-nono"></div>
               </div>
             </div>
@@ -535,7 +554,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='decimo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('500.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='decimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-decimo"></div>
               </div>
             </div>
@@ -551,7 +570,7 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='undicesimo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('6000.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='undicesimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-undicesimo"></div>
               </div>
             </div>
@@ -567,14 +586,17 @@ const [selezione, setSelezione]= useState('')
               <div className={`mt-5 w-full h-full ${selezione==='dodicesimo' ? 'block' : 'hidden'}`}>
                 <button onClick={() => handlePaymentAndAmount('700.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
               </div>
-              <div className='mt-[10px]'>
+              <div className={`mt-[10px] ${selezione==='dodicesimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-dodicesimo"></div>
               </div>
             </div>
           
           </div>
-      <div className='w-full h-full mt-5 md:mt-10'>
-        <div className='grid items-center justify-center'>
+     
+        </div>
+        <div className='w-full h-full mt-5 md:mt-10  ' >
+        <div className='flex flex-col items-center justify-center w-full '>
+          <div className='w-1/2'>
         <input
           type="text"
           value={amount}
@@ -582,13 +604,21 @@ const [selezione, setSelezione]= useState('')
           placeholder="Inserisci importo"
           className="fix-input px-4 py-2 w-full my-5 md:my-10"
         />
+          <div className='mt-5 w-full h-full'>
+                <button onClick={() => setSelezione('tredicesimo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+              </div>
+              <div className={`mt-5 w-full h-full ${selezione==='tredicesimo' ? 'block' : 'hidden'}`}>
         <button onClick={handlePayment} className='bg-black fix-btn flex justify-center items-center w-full h-[40px]'>
           <h2 className='text-white'>Prosegui</h2>
         </button>
         </div>
-      </div>
         </div>
-        <div id="paypal-button-container"></div>
+        <div className={`mt-[10px] ${selezione==='tredicesimo' ? 'block' : 'hidden'}`}>
+        <div id="paypal-button-container-tredicesimo"></div>
+        </div>
+        </div>
+      </div>
+        
       </div></>
   );
 };
