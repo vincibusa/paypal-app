@@ -1,6 +1,6 @@
 
 import './App.css';
-import TailNav from './components/nav';
+
 import PayPalComponent from './components/pay';
 
 
