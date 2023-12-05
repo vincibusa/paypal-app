@@ -397,11 +397,11 @@ const [selezione, setSelezione]= useState('')
             <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 30€  </p><p className='text-black font-inter text-xl font-normal'>(quota associativa)</p></div>
               <div className='mt-5 w-full h-full'>
-                <button onClick={() => setSelezione('primo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('primo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
             
                <div className={`mt-5 w-full h-full ${selezione==='primo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('30.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Prosegui</button>
+                <button onClick={() => handlePaymentAndAmount('30.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
 
               <div className={`mt-[10px] ${selezione==='primo' ? 'block' : 'hidden'}`}>
@@ -414,11 +414,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 100€ </p></div>
                <div className='mt-5 w-full h-full '>
-                <button onClick={() => setSelezione('secondo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('secondo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='secondo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('100.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('100.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='secondo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-secondo"></div>
@@ -430,11 +430,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 200€ </p></div>
               <div className='mt-5 w-full'>
-                <button onClick={() => setSelezione('terzo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('terzo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 h-full ${selezione==='terzo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('200.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('200.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='terzo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-terzo"></div>
@@ -448,11 +448,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 200€  </p></div>
               <div className='mt-5 w-full h-full'>
-                <button onClick={() => setSelezione('quarto')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('quarto')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='quarto' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('200.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('200.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='quarto' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-quarto"></div>
@@ -464,11 +464,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 220€ </p></div>
               <div className='mt-5 w-full h-full'>
-                <button onClick={() => setSelezione('quinto')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('quinto')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='quinto' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('220.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('220.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='quinto' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-quinto"></div>
@@ -480,11 +480,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 250€ </p></div>
               <div className='mt-5 w-full h-full '>
-                <button onClick={() => setSelezione('sesto')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('sesto')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full  ${selezione==='sesto' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('250.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('250.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='sesto' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-sesto"></div>
@@ -498,11 +498,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 300€  </p></div>
               <div className='mt-5 w-full h-full '>
-                <button onClick={() => setSelezione('settimo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('settimo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='settimo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('300.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('300.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='settimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-settimo"></div>
@@ -514,11 +514,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 330€ </p></div>
               <div className='mt-5 w-full h-full '>
-                <button onClick={() => setSelezione('ottavo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('ottavo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='ottavo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('330.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('330.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='ottavo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-ottavo"></div>
@@ -530,11 +530,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 400€ </p></div>
               <div className='mt-5 w-full h-full'>
-                <button onClick={() => setSelezione('nono')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('nono')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='nono' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('4000.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('4000.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='nono' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-nono"></div>
@@ -548,11 +548,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 500€  </p></div>
               <div className='mt-5 w-full h-full '>
-                <button onClick={() => setSelezione('decimo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('decimo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='decimo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('500.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('500.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='decimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-decimo"></div>
@@ -564,11 +564,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 600€ </p></div>
               <div className='mt-5 w-full h-full '>
-                <button onClick={() => setSelezione('undicesimo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('undicesimo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='undicesimo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('6000.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('6000.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='undicesimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-undicesimo"></div>
@@ -580,11 +580,11 @@ const [selezione, setSelezione]= useState('')
           <div className=' rounded-lg bg-white shadow-md flex flex-col items-center justify-center px-5 py-5 '>
               <div><p className='text-black font-inter text-3xl font-normal'>Paga 700€ </p></div>
               <div className='mt-5 w-full h-full'>
-                <button onClick={() => setSelezione('dodicesimo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('dodicesimo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
           
               <div className={`mt-5 w-full h-full ${selezione==='dodicesimo' ? 'block' : 'hidden'}`}>
-                <button onClick={() => handlePaymentAndAmount('700.00')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => handlePaymentAndAmount('700.00')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Prosegui</button>
               </div>
               <div className={`mt-[10px] ${selezione==='dodicesimo' ? 'block' : 'hidden'}`}>
               <div id="paypal-button-container-dodicesimo"></div>
@@ -605,10 +605,10 @@ const [selezione, setSelezione]= useState('')
           className="fix-input px-4 py-2 w-full my-5 md:my-10"
         />
           <div className='mt-5 w-full h-full'>
-                <button onClick={() => setSelezione('tredicesimo')} className='rounded-3xl bg-indigo-900 shadow-md w-full'>Paga</button>
+                <button onClick={() => setSelezione('tredicesimo')} className='rounded-3xl bg-#E96473 shadow-md w-full'>Paga</button>
               </div>
               <div className={`mt-5 w-full h-full ${selezione==='tredicesimo' ? 'block' : 'hidden'}`}>
-        <button onClick={handlePayment} className='bg-black fix-btn flex justify-center items-center w-full h-[40px]'>
+        <button onClick={handlePayment} className='bg-#E96473 fix-btn flex justify-center items-center w-full h-[40px]'>
           <h2 className='text-white'>Prosegui</h2>
         </button>
         </div>
